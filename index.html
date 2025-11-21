@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irregular Verb Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                900: '#1e3a8a',
+              },
+              fun: {
+                yellow: '#fbbf24',
+                pink: '#f472b6',
+                purple: '#a78bfa',
+                green: '#34d399',
+                ground: '#4ade80',
+                sky: '#bae6fd',
+              }
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'wiggle': 'wiggle 0.5s ease-in-out infinite',
+              'hero-idle': 'heroIdle 2s ease-in-out infinite',
+              'hero-attack': 'heroAttack 0.4s ease-in-out',
+              'hero-damage': 'heroDamage 0.4s ease-in-out',
+              'monster-float': 'monsterFloat 3s ease-in-out infinite',
+              'slide-bg': 'slideBg 20s linear infinite',
+              'float-up': 'floatUp 1s ease-out forwards',
+            },
+            keyframes: {
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              heroIdle: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              },
+              heroAttack: {
+                '0%': { transform: 'translateX(0) scale(1)' },
+                '50%': { transform: 'translateX(100px) scale(1.2)' },
+                '100%': { transform: 'translateX(0) scale(1)' },
+              },
+              heroDamage: {
+                '0%, 100%': { transform: 'translateX(0)', filter: 'none' },
+                '25%': { transform: 'translateX(-10px)', filter: 'hue-rotate(90deg)' },
+                '75%': { transform: 'translateX(10px)', filter: 'hue-rotate(90deg)' },
+              },
+              monsterFloat: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              slideBg: {
+                '0%': { backgroundPosition: '0% 0%' },
+                '100%': { backgroundPosition: '100% 0%' },
+              },
+              floatUp: {
+                '0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+                '100%': { transform: 'translateY(-50px) scale(1.5)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f0f9ff;
+        /* Mac-like smooth font rendering */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Hide scrollbar for clean UI */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
